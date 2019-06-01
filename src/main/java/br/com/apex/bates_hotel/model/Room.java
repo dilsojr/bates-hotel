@@ -13,11 +13,12 @@ public class Room {
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@Column(name ="room_id")
 	private Integer id;
 	private Integer number;
 	@Column(scale = 2)
 	private BigDecimal dailyValue;
-	private Roomtype type;
+	private RoomType type;
 	
 	public Integer getId() {
 		return id;
@@ -37,10 +38,10 @@ public class Room {
 	public void setDailyValue(BigDecimal dailyValue) {
 		this.dailyValue = dailyValue;
 	}
-	public Roomtype getType() {
+	public RoomType getType() {
 		return type;
 	}
-	public void setType(Roomtype type) {
+	public void setType(RoomType type) {
 		this.type = type;
 	}
 	
